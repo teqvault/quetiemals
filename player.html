@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    
+    <a href="https://play.google.com/store/apps/details?id=com.teqvault.quetiemals" target="_blank" class="play-full-game-btn">
+      Get it on Google Play
+    </a>
+
+    <div class="ad-zone">
+      <div class="ad-placeholder">
+        Left Ad<br>Placeholder
+      </div>
+    </div>
+
     <div id="unity-container">
       <canvas id="unity-canvas" width=540 height=960 tabindex="0"></canvas>
       <div id="unity-loading-bar">
@@ -18,6 +29,13 @@
       </div>
       <div id="unity-warning"></div>
     </div>
+
+    <div class="ad-zone">
+      <div class="ad-placeholder">
+        Right Ad<br>Placeholder
+      </div>
+    </div>
+
     <script src="Build/QuetiemalsWeb.loader.js"></script>
     <script>
       var container = document.querySelector("#unity-container");
