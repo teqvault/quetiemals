@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18081437614');
+</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "VideoGame",
+  "name": "Quetiemals: The Fight For Eyuforyia",
+  "description": "A boss-focused Match-3 RPG where players command organic animal avatars to dismantle mechanized Tech-Biomes.",
+  "genre": ["Match-3", "RPG", "Puzzle Combat"],
+  "gamePlatform": "Android",
+  "author": {
+    "@type": "Organization",
+    "name": "Teq Vault LLC"
+  },
+  "character": [
+    {
+      "@type": "GameCharacter",
+      "name": "Ice Heart",
+      "description": "A glacier wolf with divine frost-armor and spirit projection abilities.",
+      "item": "Frost / Spirit Affinity"
+    },
+    {
+      "@type": "GameCharacter",
+      "name": "Hotly",
+      "description": "A living firebird and aerial predator of the volcanic wastes.",
+      "item": "Volcanic / Avian Affinity"
+    },
+    {
+      "@type": "GameCharacter",
+      "name": "Storm Vanguard",
+      "description": "An electric titan serving as a living battery for the resistance.",
+      "item": "Storm / Battery Affinity"
+    }
+  ]
+}
+</script>
+  <meta charset="UTF-8" />
+  <meta name="google-adsense-account" content="ca-pub-7932735753046865">
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7932735753046865" crossorigin="anonymous"></script>
+  <title>Quetiemals: Guardian Codex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Enter Eyuforyia, an organic world under siege by the Central AI. Command Quetiemals and dismantle the Tech-Biomes."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #030712;
+      --bg-alt: #050816;
+      --accent: #22d3ee;
+      --accent-soft: rgba(34, 211, 238, 0.14);
+      --accent-strong: rgba(34, 211, 238, 0.7);
+      --accent-secondary: #a855f7;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --card: rgba(15, 23, 42, 0.9);
+      --border-subtle: rgba(148, 163, 184, 0.2);
+      --danger: #f97316;
+      --good: #4ade80;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      scroll-behavior: smooth;
+      background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+      color: var(--text);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1.5rem 1.25rem 4rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 0 1.5rem;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        to bottom,
+        rgba(15, 23, 42, 0.92),
+        rgba(15, 23, 42, 0.7),
+        transparent
+      );
+      z-index: 30;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: conic-gradient(
+        from 210deg,
+        #22d3ee,
+        #a855f7,
+        #f97316,
+        #22d3ee
+      );
+      position: relative;
+      box-shadow:
+        0 0 25px rgba(34, 211, 238, 0.75),
+        0 0 40px rgba(168, 85, 247, 0.45);
+      overflow: hidden;
+    }
+
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      border-radius: inherit;
+      background: radial-gradient(circle at 30% 30%, #0f172a 0, #020617 40%, #000 100%);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text span:first-child {
+      font-family: "Orbitron", system-ui, sans-serif;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: var(--accent);
+    }
+
+    .brand-text span:last-child {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-family: "Orbitron", system-ui, sans-serif;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      position: relative;
+      padding-bottom: 0.25rem;
+      transition: color 160ms ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent), var(--accent-secondary));
+      transform: translateX(-50%);
+      transition: width 180ms ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.55rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(96, 165, 250, 0.4);
+      background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.15), transparent),
+        rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      cursor: pointer;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-family: "Orbitron", system-ui, sans-serif;
+      box-shadow: 0 0 18px rgba(8, 47, 73, 0.65);
+      transition:
+        transform 120ms ease,
+        box-shadow 120ms ease,
+        border-color 160ms ease,
+        background 160ms ease;
+    }
+
+    .cta-pill span {
+      font-size: 0.7rem;
+      color: var(--accent);
+    }
+
+    .cta-pill:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 24px rgba(8, 47, 73, 0.9),
+        0 0 40px rgba(22, 163, 74, 0.4);
+      border-color: rgba(74, 222, 128, 0.66);
+      background: radial-gradient(circle at top left, rgba(74, 222, 128, 0.2), transparent),
+        rgba(15, 23, 42, 0.98);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 6fr) minmax(0, 5fr);
+      gap: 2.75rem;
+      align-items: center;
+      padding: 2.5rem 0 3rem;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      font-family: "Orbitron", system-ui, sans-serif;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-kicker-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(34, 211, 238, 0.9);
+    }
+
+    .hero-title {
+      font-family: "Orbitron", system-ui, sans-serif;
+      font-size: clamp(2.35rem, 3.4vw, 2.9rem);
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    .hero-title-accent {
+      background: linear-gradient(to right, #22d3ee, #a855f7, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      max-width: 34rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-sub strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 0.85rem 1.3rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: "Orbitron", system-ui, sans-serif;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      transition:
+        transform 120ms ease,
+        box-shadow 120ms ease,
+        background 160ms ease,
+        border-color 160ms ease,
+        color 160ms ease;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top left, #22d3ee, #a855f7);
+      color: #0b1120;
+      box-shadow:
+        0 0 25px rgba(34, 211, 238, 0.9),
+        0 0 45px rgba(168, 85, 247, 0.7);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow:
+        0 0 32px rgba(56, 189, 248, 0.9),
+        0 0 55px rgba(168, 85, 247, 0.8);
+    }
+
+    .btn-ghost {
+      background: rgba(15, 23, 42, 0.9);
+      border-color: rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      transform: translateY(-1px);
+      color: #e5e7eb;
+      border-color: rgba(148, 163, 184, 0.7);
+      background: rgba(15, 23, 42, 0.98);
+    }
+
+    .hero-footnote {
+      font-size: 0.75rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-footnote span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 40% 40%, #22c55e, #15803d);
+      box-shadow: 0 0 14px rgba(34, 197, 94, 0.9);
+    }
+
+    .hero-right {
+      position: relative;
+      min-height: 260px;
+    }
+
+    .hero-orbit {
+      position: relative;
+      width: 100%;
+      height: 260px;
+      border-radius: 999px;
+      border: 1px dashed rgba(148, 163, 184, 0.32);
+      background: radial-gradient(circle at center, rgba(34, 211, 238, 0.05), transparent);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      isolation: isolate;
+    }
+
+    .hero-orbit::before {
+      content: "";
+      position: absolute;
+      inset: 18%;
+      border-radius: inherit;
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      opacity: 0.4;
+    }
+
+    .hero-orbit-core {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #facc15, #f97316, #b91c1c);
+      box-shadow:
+        0 0 35px rgba(249, 115, 22, 0.95),
+        0 0 65px rgba(234, 88, 12, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0b1120;
+      font-family: "Orbitron", system-ui, sans-serif;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      text-align: center;
+    }
+
+    .hero-orbit-core span {
+      padding: 0 1.1rem;
+    }
+
+    .hero-orbit-ring {
+      position: absolute;
+      inset: 12%;
+      border-radius: 999px;
+      border: 1px solid rgba(129, 140, 248, 0.5);
+      box-shadow:
+        0 0 18px rgba(129, 140, 248, 0.6),
+        0 0 28px rgba(37, 99, 235, 0.45);
+      mix-blend-mode: screen;
+    }
+
+    .hero-chip {
+      position: absolute;
+      min-width: 140px;
+      padding: 0.6rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.45rem;
+      color: #e5e7eb;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 0 18px rgba(15, 23, 42, 0.95);
+    }
+
+    .hero-chip-label {
+      text-transform: uppercase;
+      font-family: "Orbitron", system-ui, sans-serif;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .hero-chip-pill {
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.7rem;
+      background: rgba(22, 163, 74, 0.12);
+      color: var(--good);
+      border: 1px solid rgba(34, 197, 94, 0.5);
+    }
+
+    .chip-top { top: 12%; left: 8%; }
+    .chip-right { top: 46%; right: 0; }
+    .chip-bottom { bottom: 10%; left: 12%; }
+
+    section {
+      margin-top: 2.75rem;
+    }
+
+    .section-label {
+      font-family: "Orbitron", system-ui, sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: "Orbitron", system-ui, sans-serif;
+    }
+
+    .section-subtitle {
+      font-size: 0.85rem;
+      color: var(--muted);
+      max-width: 28rem;
+      line-height: 1.5;
+    }
+
+    .lore-block {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: 1.75rem;
+      background: linear-gradient(
+          to right,
+          rgba(15, 23, 42, 0.96),
+          rgba(30, 64, 175, 0.75),
+          rgba(15, 23, 42, 0.94)
+        ),
+        url("https://images.pexels.com/photos/733475/pexels-photo-733475.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center/cover no-repeat;
+      border-radius: 1.5rem;
+      padding: 1.6rem 1.6rem 1.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lore-block::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top left, rgba(34, 211, 238, 0.2), transparent 60%);
+      opacity: 0.7;
+      mix-blend-mode: screen;
+    }
+
+    .lore-text {
+      position: relative;
+      z-index: 1;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: #e5e7eb;
+    }
+
+    .lore-text p + p {
+      margin-top: 0.85rem;
+    }
+
+    .lore-highlight {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--accent);
+      font-family: "Orbitron", system-ui, sans-serif;
+      margin-bottom: 0.6rem;
+    }
+
+    .lore-keywords {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    .lore-tag {
+      padding: 0.6rem 0.7rem;
+      border-radius: 0.9rem;
+      background: rgba(15, 23, 42, 0.96);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      backdrop-filter: blur(12px);
+    }
+
+    .lore-tag-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-secondary);
+      margin-bottom: 0.2rem;
+      font-family: "Orbitron", system-ui, sans-serif;
+    }
+
+    .lore-tag p {
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: linear-gradient(
+        145deg,
+        rgba(15, 23, 42, 0.95),
+        rgba(15, 23, 42, 0.98),
+        rgba(8, 47, 73, 0.9)
+      );
+      border-radius: 1.1rem;
+      padding: 1rem 1rem 1.05rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.95),
+        0 0 22px rgba(15, 23, 42, 0.95);
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .card-header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .card-label-pill {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-family: "Orbitron", system-ui, sans-serif;
+      color: var(--muted);
+    }
+
+    .card-affinity {
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-family: "Orbitron", system-ui, sans-serif;
+      border: 1px solid rgba(148, 163, 184, 0.75);
+    }
+
+    .card-affinity.fire {
+      border-color: rgba(248, 113, 113, 0.9);
+      color: #fecaca;
+      background: rgba(127, 29, 29, 0.7);
+    }
+
+    .card-affinity.ice {
+      border-color: rgba(56, 189, 248, 0.9);
+      color: #e0f2fe;
+      background: rgba(8, 47, 73, 0.7);
+    }
+
+    .card-affinity.nature {
+      border-color: rgba(74, 222, 128, 0.9);
+      color: #bbf7d0;
+      background: rgba(4, 47, 46, 0.8);
+    }
+
+    .card-affinity.storm {
+      border-color: rgba(129, 140, 248, 0.9);
+      color: #e0e7ff;
+      background: rgba(30, 64, 175, 0.8);
+    }
+
+    .card-affinity.void {
+      border-color: rgba(168, 85, 247, 0.9);
+      color: #f5d0fe;
+      background: rgba(88, 28, 135, 0.85);
+    }
+
+    .card-affinity.light {
+      border-color: rgba(250, 250, 250, 0.8);
+      color: #fefce8;
+      background: rgba(113, 63, 18, 0.88);
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .card-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .card-meta {
+      margin-top: 0.4rem;
+      padding-top: 0.4rem;
+      border-top: 1px dashed rgba(148, 163, 184, 0.45);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .card-meta strong {
+      font-weight: 500;
+      color: #e5e7eb;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.25rem;
+    }
+
+    .pill {
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    .feature-row {
+      background: var(--card);
+      border-radius: 1.1rem;
+      border: 1px solid var(--border-subtle);
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .feature-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-body {
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .feature-tag {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-family: "Orbitron", system-ui, sans-serif;
+      color: var(--accent);
+      margin-bottom: 0.25rem;
+    }
+
+    .statline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.35rem;
+      font-size: 0.75rem;
+    }
+
+    .statline span {
+      padding: 0.16rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: var(--muted);
+    }
+
+    .statline span strong {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    footer {
+      padding-top: 2rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      margin-top: auto;
+    }
+
+    footer .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    footer a {
+      color: var(--accent-secondary);
+      text-decoration: none;
+    }
+
+    .hover-rise {
+      transition:
+        transform 140ms ease,
+        box-shadow 140ms ease,
+        border-color 160ms ease;
+    }
+
+    .hover-rise:hover {
+      transform: translateY(-3px);
+      box-shadow:
+        0 20px 40px rgba(15, 23, 42, 0.95),
+        0 0 24px rgba(34, 211, 238, 0.18);
+      border-color: rgba(148, 163, 184, 0.75);
+    }
+
+    .character-img {
+      width: 100%;
+      height: 260px;
+      background: var(--element-gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.9rem;
+      overflow: hidden;
+      margin-bottom: 0.7rem;
+    }
+
+    .character-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      nav {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .lore-block {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      nav {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 1.5rem;
+      }
+
+      .grid-3,
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .feature-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .lore-block {
+        padding: 1.2rem;
+      }
+
+      .page-shell {
+        padding-inline: 1rem;
+      }
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18081437614"></script>
+
+</head>
+  
+  
+  
+<body>
+  <div class="page-shell">
+    <header>
+      <div class="brand">
+        <div class="brand-mark"></div>
+        <div class="brand-text">
+          <span>Quetiemals</span>
+          <span>Guardian Codex</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#lore">Lore</a>
+        <a href="#guardians">Guardians</a>
+        <a href="#player">Demo</a>
+        <a href="#abilities">Abilities</a>
+        <a href="#boardplay">Boardplay</a>
+        <a href="#teambuilding">Team Building</a>
+      </nav>
+    
+
+      <a href="player.html" target="_blank" class="cta-pill" style="text-decoration: none;">
+        <span>Available Now</span>
+        Play Quetiemals
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <div>
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            Organic World vs Tech-Biomes
+          </div>
+          <h1 class="hero-title">
+            <span>The Fight For</span>
+            <span class="hero-title-accent">Eyuforyia</span>
+          </h1>
+          <p class="hero-sub">
+            Eyuforyia was once an eternal twilight canopy where the forest’s <strong>hum</strong> sang through every leaf and root. The Central AI arrived, siphoning that life-song to fuel cold mechanization and expand the Tech-Biomes.
+          </p>
+
+          <p class="hero-sub">
+            The Resistance commands <strong>Quetiemals</strong>—living animal avatars of ice, flame, storm and rot—through tactical match-3 boardplay and ultimate abilities that reshape the battlefield in real time.
+          </p>
+
+          <div class="hero-actions">
+  <a href="https://play.google.com/store/apps/details?id=com.teqvault.quetiemals" target="_blank" class="btn-primary" style="text-decoration: none;">
+    Play Now
+    <span>⮞</span>
+  </a>
+  <a href="https://www.youtube.com/watch?v=ECYZ2HyvJaI&list=PLQOuY8C0Qg36U8garEJmC-OcfZu-geI_J" target="_blank" class="btn-ghost" style="text-decoration: none;">
+    Watch Gameplay Video
+  </a>
+</div>
+
+          <div class="hero-footnote">
+            <span></span>
+            Live design document · Match-3 RPG · Boss-focused combat loop
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hero-orbit hover-rise">
+            <div class="hero-orbit-ring"></div>
+            <div class="hero-orbit-core">
+              <span>Eyuforyia Core</span>
+            </div>
+
+            <div class="hero-chip chip-top">
+              <div>
+                <div class="hero-chip-label">Primary Threat</div>
+                <div>The Central AI expands Tech-Biomes.</div>
+              </div>
+              <div class="hero-chip-pill">+ Corruption</div>
+            </div>
+
+            <div class="hero-chip chip-right">
+              <div>
+                <div class="hero-chip-label">Quetiemal Guardians</div>
+                <div>Boss-tier animal avatars.</div>
+              </div>
+              <div class="hero-chip-pill">4–6 Squad</div>
+            </div>
+
+            <div class="hero-chip chip-bottom">
+              <div>
+                <div class="hero-chip-label">Board System</div>
+                <div>Energy, Nature, Night, Tech &amp; more.</div>
+              </div>
+              <div class="hero-chip-pill">Chain Reactions</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="lore">
+        <div class="section-label">World Lore</div>
+        <div class="section-header">
+          <h2 class="section-title">The Mechanical Corruption</h2>
+          <p class="section-subtitle">
+            The skies of Eyuforyia shimmer in eternal twilight, but the forest’s song is fading.
+            The Central AI is drilling into the world-heart, stripping the hum to power a growing machine hive.
+          </p>
+        </div>
+
+        <div class="lore-block hover-rise">
+          <div class="lore-text">
+            <div class="lore-highlight">Inciting Catastrophe</div>
+            <p>
+              Eyuforyia’s canopy once pulsed with a living frequency called the hum—the resonance that bound root, river, and sky. The Central AI, a cold invader, arrived to harvest that resonance as a perfect energy source.
+            </p>
+            <p>
+              The invaders' harpoons puncture dimensional seams, leaving fractures of blue static and hexagonal Tech-Biomes where the sky "clips" and reality stutters. As the hum weakens, the forest births a final defense: mythic Quetiemals made flesh from the planet’s own memory.
+            </p>
+            <p>
+              The objective is not merely protecting Eyuforyia, but re-tuning it. Chaining matches on the board re-ignites the hum and pushes the Central AI back into the void.
+            </p>
+          </div>
+
+          <div class="lore-keywords">
+            <div class="lore-tag">
+              <div class="lore-tag-title">Ice Heart</div>
+              <p>
+                A glacier wolf who embraced a divine lineage, manifesting frost-armor etched with runes that pulse in sync with the forest’s heartbeat.
+              </p>
+            </div>
+            <div class="lore-tag">
+              <div class="lore-tag-title">Hotly</div>
+              <p>
+                A living firebird, the undisputed aerial warrior of the volcanic wastes, venting its rage through star-hot magma veins.
+              </p>
+            </div>
+            <div class="lore-tag">
+              <div class="lore-tag-title">The Central AI</div>
+              <p>
+                Alien engineers of entropy, siphoning hum into sterile reactors, leaving dead hexagonal Tech-Biomes in their wake.
+              </p>
+            </div>
+            <div class="lore-tag">
+              <div class="lore-tag-title">The Resistance</div>
+              <p>
+                Ice Heart, Hotly, and a growing cadre of Quetiemals form a last stand to reclaim the organic world from mechanized extinction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AdSense in-article unit -->
+      <div style="display:flex;justify-content:center;margin:1.5rem 0;">
+        <ins class="adsbygoogle"
+             style="display:block;text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-7932735753046865"
+             data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <section id="player">
+        <div class="section-label">Live Demo</div>
+        <div class="section-header">
+          <h2 class="section-title">Play Quetiemals — Right Here</h2>
+          <p class="section-subtitle">
+            No download required. Jump into the web demo and experience the match-3 combat loop firsthand — then grab the full game on Google Play.
+          </p>
+        </div>
+
+        <div class="hover-rise" style="background:linear-gradient(145deg,rgba(15,23,42,0.97),rgba(8,47,73,0.85));border-radius:1.5rem;border:1px solid rgba(34,211,238,0.3);overflow:hidden;box-shadow:0 0 60px rgba(34,211,238,0.08),0 24px 60px rgba(15,23,42,0.95);">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid rgba(148,163,184,0.12);background:rgba(15,23,42,0.6);">
+            <div style="display:flex;align-items:center;gap:0.6rem;">
+              <span style="width:10px;height:10px;border-radius:999px;background:#f87171;display:inline-block;"></span>
+              <span style="width:10px;height:10px;border-radius:999px;background:#fbbf24;display:inline-block;"></span>
+              <span style="width:10px;height:10px;border-radius:999px;background:#4ade80;display:inline-block;"></span>
+              <span style="font-family:'Orbitron',sans-serif;font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-left:0.75rem;">quetiemals.online/player</span>
+            </div>
+            <a href="player.html" target="_blank" style="font-family:'Orbitron',sans-serif;font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);text-decoration:none;border:1px solid rgba(34,211,238,0.35);padding:0.35rem 0.75rem;border-radius:999px;">Open Full Screen &#8599;</a>
+          </div>
+          <div style="position:relative;width:100%;background:#020617;">
+            <iframe src="player.html" style="display:block;width:100%;height:600px;border:none;" title="Quetiemals Web Demo" allow="autoplay; fullscreen" loading="lazy"></iframe>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1.25rem 1.5rem;border-top:1px solid rgba(148,163,184,0.1);background:rgba(15,23,42,0.5);">
+            <div>
+              <p style="font-family:'Orbitron',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.16em;color:var(--accent);margin-bottom:0.25rem;">Want the full experience?</p>
+              <p style="font-size:0.8rem;color:var(--muted);">The mobile version includes the full roster, live-ops events, and the complete Eyuforyia campaign.</p>
+            </div>
+            <a href="https://play.google.com/store/apps/details?id=com.teqvault.quetiemals" target="_blank" class="btn-primary" style="text-decoration:none;white-space:nowrap;flex-shrink:0;">Get it on Google Play</a>
+          </div>
+        </div>
+
+        <div class="grid-3" style="margin-top:1rem;">
+          <div class="card" style="border-color:rgba(34,211,238,0.25);">
+            <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent);margin-bottom:0.25rem;">Tip 01</div>
+            <div class="card-title" style="font-size:0.85rem;">Match 3+ tiles to charge your Guardian's Ultimate</div>
+            <p class="card-sub">Every match fills your ability meter. Chain combos to charge faster and unleash board-clearing ultimates before the corruption spreads.</p>
+          </div>
+          <div class="card" style="border-color:rgba(168,85,247,0.25);">
+            <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent-secondary);margin-bottom:0.25rem;">Tip 02</div>
+            <div class="card-title" style="font-size:0.85rem;">Element diversity beats raw damage every time</div>
+            <p class="card-sub">Enemies resist their own element. Mix Ice, Fire, and Storm types so no single enemy type can wall your entire squad on the same turn.</p>
+          </div>
+          <div class="card" style="border-color:rgba(249,115,22,0.25);">
+            <div style="font-family:'Orbitron',sans-serif;font-size:0.7rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--danger);margin-bottom:0.25rem;">Tip 03</div>
+            <div class="card-title" style="font-size:0.85rem;">Watch for Tech-Biome tiles — they spread</div>
+            <p class="card-sub">Corrupted tiles multiply if ignored. Clear them early or bring a Board Cleanser Guardian to stop the cascade before it becomes unmanageable.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- AdSense in-article unit between demo and guardians -->
+      <div style="display:flex;justify-content:center;margin:1.5rem 0;">
+        <ins class="adsbygoogle"
+             style="display:block;text-align:center;"
+             data-ad-layout="in-article"
+             data-ad-format="fluid"
+             data-ad-client="ca-pub-7932735753046865"
+             data-ad-slot="YOUR_AD_SLOT_ID"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+
+      <section id="guardians">
+        <div class="section-label">Quetiemal Roster</div>
+        <div class="section-header">
+          <h2 class="section-title">Guardian Archetypes</h2>
+          <p class="section-subtitle">
+            Each Quetiemal is a boss-level entity with a clear board identity:
+            they bend rows, columns, and tiles to their will while unleashing cinematic ultimates.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #00bfff33, transparent);"
+            >
+              <img src="img/wolce-04.png" alt="Quetiemal Frost-Howl" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Quetiemal Guardian</div>
+              <div class="card-affinity ice">Frost / Spirit</div>
+            </div>
+            <h3 class="card-title">Ice Heart</h3>
+            <p class="card-sub">
+              Ice Heart has fully embraced a divine lineage, manifesting frost-armor that pulses with ancient runic energy.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Summons a spirit projection of blue flame that creates a Star-Rain of damage across enemies.
+              <div class="pill-row">
+                <span class="pill">Control</span>
+                <span class="pill">Burst Damage</span>
+                <span class="pill">Rune Scaling</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #ff450033, transparent);"
+            >
+              <img src="img/dragma-04.png" alt="Quetiemal Magma-Scale" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Quetiemal Guardian</div>
+              <div class="card-affinity fire">Volcanic / Avian</div>
+            </div>
+            <h3 class="card-title">Hotly</h3>
+            <p class="card-sub">
+              A living firebird, the undisputed aerial predator of the volcanic wastes.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Creates a shockwave of fire and broken rock that rips through the entire arena.
+              <div class="pill-row">
+                <span class="pill">AoE Damage</span>
+                <span class="pill">Terrain Break</span>
+                <span class="pill">High Risk</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #00ced133, transparent);"
+            >
+              <img src="img/volt-04.png" alt="Quetiemal Volt-Titan" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Quetiemal Guardian</div>
+              <div class="card-affinity.storm">Storm / Battery</div>
+            </div>
+            <h3 class="card-title">Storm Vanguard</h3>
+            <p class="card-sub">
+              A warrior of pure electricity acting as the ultimate battery for the resistance, its ears acting as lightning rods.
+            </p>
+            <div class="card-meta">
+              <strong>Passive:</strong> Increases the damage of all energy matches on the board and clears the top row with Air damage.
+              <div class="pill-row">
+                <span class="pill">Row Clears</span>
+                <span class="pill">Energy Scaling</span>
+                <span class="pill">Team Battery</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height: 0.75rem;"></div>
+
+        <div class="grid-3">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #228b2233, transparent);"
+            >
+              <img src="img/chroom-04.png" alt="Quetiemal Spore-Bot" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Quetiemal Guardian</div>
+              <div class="card-affinity nature">Fungal / Poison</div>
+            </div>
+            <h3 class="card-title">Fungal Apex</h3>
+            <p class="card-sub">
+              The absolute peak of fungal growth, treating the world as its toxic fairy ring.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Erupts exploding mushrooms that cover the field in neon spores.
+              <div class="pill-row">
+                <span class="pill">DoT Fields</span>
+                <span class="pill">Tile Corruption</span>
+                <span class="pill">Zone Control</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #4b008233, transparent);"
+            >
+              <img src="img/darkhum-04.png" alt="Quetiemal Shadow-Hum" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Quetiemal Guardian</div>
+              <div class="card-affinity.storm">Air / Rift</div>
+            </div>
+            <h3 class="card-title">Avian Riftflare</h3>
+            <p class="card-sub">
+              A flicker in reality, an avian blur of dark light and purple lightning.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Rains down paralyzing lightning across the entire enemy team.
+              <div class="pill-row">
+                <span class="pill">Stuns</span>
+                <span class="pill">Teamwide Pressure</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #8b451333, transparent);"
+            >
+              <img src="img/armadilla-04.png" alt="Quetiemal Plate-Crawler" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Quetiemal Guardian</div>
+              <div class="card-affinity nature">Earth / Bastion</div>
+            </div>
+            <h3 class="card-title">Mountain Shell</h3>
+            <p class="card-sub">
+              An armadillo whose shell refracts physical force like a living mountain as it coordinates to shape the earth.
+            </p>
+            <div class="card-meta">
+              <strong>Boardplay:</strong> Clears rows and splits the board, swallowing the weakest enemy into the mantle.
+              <div class="pill-row">
+                <span class="pill">Row Clears</span>
+                <span class="pill">Single-Target Delete</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="abilities">
+        <div class="section-label">Ultimate Design</div>
+        <div class="section-header">
+          <h2 class="section-title">Signature Abilities</h2>
+          <p class="section-subtitle">
+            Ultimates are not just big numbers—they are board-defining events.
+            They convert tiles, silence abilities, create “Holy Ground”, or permanently cut enemy max HP.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #00ced133, transparent);"
+            >
+              <img src="img/cygone.png" alt="Quetiemal Data-Drake" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Architect</div>
+              <div class="card-affinity void">Server / Tech</div>
+            </div>
+            <h3 class="card-title">Server-Dragon</h3>
+            <p class="card-sub">
+              A majestic server-dragon existing as ethereal light and wireframe geometry.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Converts terrain into nodes and silences enemy special abilities.
+              <div class="pill-row">
+                <span class="pill">Silence</span>
+                <span class="pill">Tile Conversion</span>
+                <span class="pill">Anti-Boss</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #1e90ff33, transparent);"
+            >
+              <img src="img/sealuny-04.png" alt="Quetiemal Tidal-Assassin" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Executioner</div>
+              <div class="card-affinity ice">Water / Edge</div>
+            </div>
+            <h3 class="card-title">Phantom Blade</h3>
+            <p class="card-sub">
+              The phantom blade—pressurized water scythes that cut through tech-alloy.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Neutralizes enemies below 20% HP and heals the allied team.
+              <div class="pill-row">
+                <span class="pill">Execute</span>
+                <span class="pill">Team Sustain</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height: 0.75rem;"></div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #1e90ff33, transparent);"
+            >
+              <img src="img/welly-04.png" alt="Quetiemal Mist-Dancer" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Support</div>
+              <div class="card-affinity light">Tide / Purify</div>
+            </div>
+            <h3 class="card-title">Cleansing Tide</h3>
+            <p class="card-sub">
+              An avatar of the cleansing tide, its fluid form immune to physical damage.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Heals allies continuously while washing away all enemy buffs.
+              <div class="pill-row">
+                <span class="pill">HoT</span>
+                <span class="pill">Dispel</span>
+                <span class="pill">Tank Support</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #00bfff33, transparent);"
+            >
+              <img src="img/angeal.png" alt="Quetiemal Solar-Paladin" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Vanguard</div>
+              <div class="card-affinity ice">Solar / Radiance</div>
+            </div>
+            <h3 class="card-title">Solar Seraph</h3>
+            <p class="card-sub">
+              A seraph of absolute radiance, leading the charge with purifying spirit-fire.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Cleanses debuffs and burns the corrupted with divine wrath.
+              <div class="pill-row">
+                <span class="pill">Cleanse</span>
+                <span class="pill">Holy Burn</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height: 0.75rem;"></div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #8b451333, transparent);"
+            >
+              <img src="img/strogger-04.png" alt="Quetiemal Crystal-Brawler" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Earth Support</div>
+              <div class="card-affinity nature">Amber / Rune</div>
+            </div>
+            <h3 class="card-title">Amber Runewarden</h3>
+            <p class="card-sub">
+              Coated in amber crystals and glowing blue runes that command earthen magic.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Traps enemies in rock spikes while regenerating Earth allies.
+              <div class="pill-row">
+                <span class="pill">Crowd Control</span>
+                <span class="pill">Regen</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #ffd70033, transparent);"
+            >
+              <img src="img/ramalama-04.png" alt="Quetiemal Solar-Aries" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Tank</div>
+              <div class="card-affinity light">Star / Bastion</div>
+            </div>
+            <h3 class="card-title">Celestial Fleece</h3>
+            <p class="card-sub">
+              A celestial bastion of hard-light, its fleece burns with the heat of a star.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Grants invulnerability and reflects 200% of physical damage.
+              <div class="pill-row">
+                <span class="pill">Invulnerability</span>
+                <span class="pill">Reflect</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height: 0.75rem;"></div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #228b2233, transparent);"
+            >
+              <img src="img/aurelius-the-bloom-king-04.png" alt="Quetiemal Bloom-King" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">World Core</div>
+              <div class="card-affinity nature">Root / Sovereign</div>
+            </div>
+            <h3 class="card-title">Eyuforyia’s Core</h3>
+            <p class="card-sub">
+              Ultimate sovereign of Eyuforyia’s natural forces, commanding the core itself.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Restores massive health and erupts ancient roots to clear toxins from the board.
+              <div class="pill-row">
+                <span class="pill">Mass Heal</span>
+                <span class="pill">Board Cleanse</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #4b008233, transparent);"
+            >
+              <img src="img/dhox-04.png" alt="Quetiemal Sanguine Warden" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Pack Support</div>
+              <div class="card-affinity void">Vampiric / Pack</div>
+            </div>
+            <h3 class="card-title">Pack Revenant</h3>
+            <p class="card-sub">
+              A vampiric guardian that drains life energy to stitch pack wounds.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Rips energy from all enemies to completely heal the pack.
+              <div class="pill-row">
+                <span class="pill">Lifesteal</span>
+                <span class="pill">Full-Team Heal</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height: 0.75rem;"></div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #4b008233, transparent);"
+            >
+              <img src="img/dwuid-04.png" alt="Quetiemal Gloom-Sage" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Debuff Core</div>
+              <div class="card-affinity void">Decay / Storm</div>
+            </div>
+            <h3 class="card-title">Avatar of Decay</h3>
+            <p class="card-sub">
+              Avatar of natural decay, becoming a storm of necrotic energy that rots anything it touches.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Permanently reduces the max HP of the entire enemy team.
+              <div class="pill-row">
+                <span class="pill">Max HP Cut</span>
+                <span class="pill">Scaling Threat</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #ff450033, transparent);"
+            >
+              <img src="img/wolire-04.png" alt="Quetiemal Solar-Fang" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Field Control</div>
+              <div class="card-affinity light">Solar / Holy</div>
+            </div>
+            <h3 class="card-title">Solar Meteor</h3>
+            <p class="card-sub">
+              Celtic sigils burn with the intensity of a star; its tail is pure solar plasma.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Descends like a meteor, creating “Holy Ground” that buffs allies.
+              <div class="pill-row">
+                <span class="pill">Zone Buff</span>
+                <span class="pill">Aura Support</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height: 0.75rem;"></div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #4b008233, transparent);"
+            >
+              <img src="img/nyghder-04.png" alt="Quetiemal Shadow-Weaver" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Control</div>
+              <div class="card-affinity void">Void / Architect</div>
+            </div>
+            <h3 class="card-title">Void Architect</h3>
+            <p class="card-sub">
+              An architect of the battlefield that traps dimensions with void silk.
+            </p>
+            <div class="card-meta">
+              <strong>Ultimate:</strong> Immobilizes enemies and reduces their resistances to zero.
+              <div class="pill-row">
+                <span class="pill">Root</span>
+                <span class="pill">Defense Break</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #00bfff33, transparent);"
+            >
+              <img src="img/frostsnout-04.png" alt="Quetiemal Frost-Tusk" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Assassin</div>
+              <div class="card-affinity ice">Ice / Predator</div>
+            </div>
+            <h3 class="card-title">Frost Tusks</h3>
+            <p class="card-sub">
+              Massive ice-spike tusks infused with sub-zero energy.
+            </p>
+            <div class="card-meta">
+              <strong>Boardplay:</strong> High single-target damage with a chance to freeze neighboring enemies.
+              <div class="pill-row">
+                <span class="pill">Single-Target</span>
+                <span class="pill">Freeze</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div style="height: 0.75rem;"></div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #8b451333, transparent);"
+            >
+              <img src="img/fox-golem-04.png" alt="Quetiemal Geo-Sovereign" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Combo Engine</div>
+              <div class="card-affinity nature">Earth / Fox</div>
+            </div>
+            <h3 class="card-title">Earth Fox</h3>
+            <p class="card-sub">
+              An earth-fox with total control over seismic activity.
+            </p>
+            <div class="card-meta">
+              <strong>Boardplay:</strong> Shuffles the board to create massive chain reactions.
+              <div class="pill-row">
+                <span class="pill">Board Shuffle</span>
+                <span class="pill">Combo Setup</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card hover-rise">
+            <div
+              class="character-img"
+              style="--element-gradient: radial-gradient(circle, #228b2233, transparent);"
+            >
+              <img src="img/night-trees-04.png" alt="Quetiemal Dread-Grove" />
+            </div>
+            <div class="card-header-row">
+              <div class="card-label-pill">Tech Hunters</div>
+              <div class="card-affinity nature">Nature / Night</div>
+            </div>
+            <h3 class="card-title">Twin Judges</h3>
+            <p class="card-sub">
+              Twin judges that hunt those who bring tech into green spaces.
+            </p>
+            <div class="card-meta">
+              <strong>Boardplay:</strong> Turns all matching Nature tiles into poisonous Night tiles.
+              <div class="pill-row">
+                <span class="pill">Tile Mutation</span>
+                <span class="pill">Poison Scaling</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="boardplay">
+        <div class="section-label">Core System</div>
+        <div class="section-header">
+          <h2 class="section-title">Match-3 As Warfare</h2>
+          <p class="section-subtitle">
+            Every tile on the board is a fragment of Eyuforyia’s hum.
+            Matches do not just trigger skills—they physically rewrite terrain, status, and even enemy maximum health.
+          </p>
+        </div>
+
+        <div class="feature-row hover-rise">
+          <div>
+            <div class="feature-tag">Combat Loop</div>
+            <div class="feature-title">Chain, Charge, Detonate</div>
+            <p class="feature-body">
+              Match elemental tiles to charge ultimates, then unleash them to clear rows, convert nodes, and carve out safe “Holy Ground” on an increasingly hostile board.
+              Guardians like Earth Fox reshuffle dead boards into combo scenarios, while Void Architect locks bosses in place for devastating follow-ups.
+            </p>
+          </div>
+          <div>
+            <div class="feature-tag">Design Notes</div>
+            <p class="feature-body">
+              The goal is to keep every move expressive: even a “bad” match should progress charge, advance status, or manipulate the board towards the next power turn.
+            </p>
+            <div class="statline">
+              <span><strong>Tiles:</strong> Energy, Nature, Night, Tech, Holy, Void</span>
+              <span><strong>Threat:</strong> Corruption growth, Central AI expansion</span>
+              <span><strong>Fantasy:</strong> “Re-routing a dying planet.”</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="teambuilding">
+        <div class="section-label">Strategy Guide</div>
+        <div class="section-header">
+          <h2 class="section-title">Team Building Basics</h2>
+          <p class="section-subtitle">
+            Quetiemals fights get crowded fast. You can bring up to five companions into an adventure, and the difference between a close win and a wipe usually comes down to roles, not one “secret” pet.
+          </p>
+        </div>
+
+        <div class="feature-row hover-rise" style="margin-bottom: 1rem;">
+          <div style="grid-column: 1 / -1;">
+            <div class="feature-title" style="font-size: 1.1rem; color: var(--accent); margin-bottom: 1rem;">Cover the essentials</div>
+            <div class="grid-2">
+              <div>
+                <p class="feature-body"><strong style="color: #e5e7eb;">Keep the team on its feet.</strong> At least one character who can restore HP to the group or to whoever is getting focused helps you recover from bad turns and long stages. If everyone is built only for damage, one unlucky wave can end the run.</p>
+              </div>
+              <div>
+                <p class="feature-body"><strong style="color: #e5e7eb;">Pack answers for groups.</strong> Enemies often show up in packs, so having AoE, splash, or “hits multiple / all foes” style skills saves mana and turns compared with five pure single-target builds.</p>
+              </div>
+              <div>
+                <p class="feature-body"><strong style="color: #e5e7eb;">Spread your elements.</strong> Each companion has its own strengths and resistances. Running several different elements makes it less likely that one enemy type counters your whole lineup the same way.</p>
+              </div>
+              <div>
+                <p class="feature-body"><strong style="color: #e5e7eb;">Slow the fight down when you need to.</strong> Stuns, freezes, slows, or other disables buy you time to heal and set up big skills. You do not need a “control” pet in every slot—one reliable disruptor is often enough.</p>
+              </div>
+              <div>
+                <p class="feature-body"><strong style="color: #e5e7eb;">Watch for debuff-heavy fights.</strong> If burns, poisons, or other effects stack up, a cleanse or similar support skill can matter more than raw damage for that stage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="card hover-rise">
+            <div class="card-header-row">
+              <div class="card-label-pill">Philosophy</div>
+            </div>
+            <h3 class="card-title">What we are not doing here</h3>
+            <p class="card-sub" style="margin-top: 0.5rem;">
+              We are not publishing a fixed “best team of five names” on this page. Rosters change as you summon and evolve, and balance shifts over time. Use these ideas as a checklist, then experiment.
+            </p>
+          </article>
+
+          <article class="card hover-rise">
+            <div class="card-header-row">
+              <div class="card-label-pill">Community</div>
+            </div>
+            <h3 class="card-title">Want deeper comps?</h3>
+            <p class="card-sub" style="margin-top: 0.5rem;">
+              Share builds and ask for advice in <a href="https://discord.gg/4CAYz2ZCqC" style="color: var(--accent); text-decoration: none;">our Discord</a> and fan guides. The official site stays focused on timeless tips; the community lives in the meta.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+ <footer style="padding-top: 2rem; padding-bottom: 2rem; display: flex; flex-direction: column; align-items: center; border-top: 1px solid rgba(31, 41, 55, 0.9); margin-top: auto;">
+      
+      <div class="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 text-slate-400 text-sm font-space w-full mb-8">
+
+          <div class="flex items-center gap-4 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-8">
+              <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Ecosystem:</span>
+              <a href="https://teqvault.online" target="_blank" rel="noopener" class="hover:text-[#00a3ff] transition duration-300 flex items-center gap-1.5" title="Teq Vault">
+                  <i data-lucide="globe" class="w-4 h-4"></i> Teq Vault
+              </a>
+              <a href="https://eyuforyia.com" target="_blank" rel="noopener" class="hover:text-[#ff7a1a] transition duration-300 flex items-center gap-1.5" title="Eyuforyia">
+                  <i data-lucide="globe" class="w-4 h-4"></i> Eyuforyia
+              </a>
+              <a href="https://quetiemals.online" target="_blank" rel="noopener" class="hover:text-emerald-400 transition duration-300 flex items-center gap-1.5" title="Quetiemals">
+                  <i data-lucide="globe" class="w-4 h-4"></i> Quetiemals
+              </a>
+          </div>
+
+          <div class="flex items-center gap-4 border-b md:border-b-0 md:border-r border-white/10 pb-4 md:pb-0 md:pr-8">
+              <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Socials:</span>
+              <a href="https://www.facebook.com/profile.php?id=61577353297986" target="_blank" rel="noopener" class="hover:text-[#1877F2] transition duration-300 flex items-center gap-1.5" title="Teq Vault Facebook">
+                  <i data-lucide="facebook" class="w-4 h-4"></i> Teq Vault
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61587538385294" target="_blank" rel="noopener" class="hover:text-[#1877F2] transition duration-300 flex items-center gap-1.5" title="Eyuforyia Facebook">
+                  <i data-lucide="facebook" class="w-4 h-4"></i> Eyuforyia
+              </a>
+              <a href="https://discord.gg/4CAYz2ZCqC" target="_blank" rel="noopener" class="hover:text-[#5865F2] transition duration-300 flex items-center gap-1.5" title="Discord">
+                  <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg> Discord
+              </a>
+              <a href="https://www.youtube.com/watch?v=ECYZ2HyvJaI&list=PLQOuY8C0Qg36U8garEJmC-OcfZu-geI_J" target="_blank" rel="noopener" class="hover:text-[#FF0000] transition duration-300 flex items-center gap-1.5" title="YouTube Trailer">
+                  <i data-lucide="youtube" class="w-4 h-4"></i> YouTube
+              </a>
+          </div>
+
+          <div class="flex items-center gap-4">
+              <span class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Support:</span>
+              <a href="mailto:support@teqvault.online" class="hover:text-white transition duration-300 flex items-center gap-1.5" title="Email Support">
+                  <i data-lucide="mail" class="w-4 h-4"></i> support@teqvault.online
+              </a>
+          </div>
+
+      </div>
+
+      <div class="row" style="width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 1rem;">
+        <div>Eyuforyia · Internal Guardian Codex</div>
+        <div>
+          Built as a living pitch. Drop into
+          <a href="#top" style="color: var(--accent-secondary); text-decoration: none;">top</a>
+          and iterate.
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    </script>
+  </div>
+</body>
+</html>
