@@ -6,22 +6,74 @@
   <meta name="google-adsense-account" content="ca-pub-2168487052215648">
   <!-- Google AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2168487052215648" crossorigin="anonymous"></script>
-  <title>Teq Vault — Games by Teq Vault LLC</title>
-  <meta name="description" content="Teq Vault LLC makes mobile games worth playing. Quetiemals: The Fight For Eyuforyia is live on Google Play. Connect 4 and Forge & Ruins coming soon." />
+  <title>Teq Vault — Mobile Games by Teq Vault LLC | Quetiemals, Connect 4, Forge &amp; Ruin</title>
+  <meta name="description" content="Teq Vault LLC makes mobile games worth playing. Quetiemals: The Fight For Eyuforyia is a boss-focused Match-3 RPG live on Google Play. Connect 4 and Forge &amp; Ruin coming soon to Android." />
+  <meta name="keywords" content="Teq Vault, Quetiemals, mobile games, match-3 RPG, Android games, Forge and Ruin, war supply RPG, tile drawing game, indie mobile game, Google Play games, Eyuforyia" />
+  <link rel="canonical" href="https://quetiemals.online/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Teq Vault" />
+  <meta property="og:url" content="https://quetiemals.online/" />
+  <meta property="og:title" content="Teq Vault — Mobile Games | Quetiemals, Connect 4, Forge &amp; Ruin" />
+  <meta property="og:description" content="Indie mobile games with real depth. Quetiemals is a boss-focused Match-3 RPG live on Google Play. Connect 4 and Forge &amp; Ruin coming soon to Android." />
+  <meta property="og:image" content="https://quetiemals.online/img/featured.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Teq Vault — Mobile Games | Quetiemals, Connect 4, Forge &amp; Ruin" />
+  <meta name="twitter:description" content="Indie mobile games with real depth. Quetiemals is live on Google Play. Connect 4 and Forge &amp; Ruin coming soon." />
+  <meta name="twitter:image" content="https://quetiemals.online/img/featured.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org/",
-    "@type": "Organization",
-    "name": "Teq Vault LLC",
-    "url": "https://quetiemals.online",
-    "description": "Indie mobile game studio behind Quetiemals: The Fight For Eyuforyia.",
-    "contactPoint": { "@type": "ContactPoint", "email": "support@teqvault.online" }
-  }
+  [
+    {
+      "@context": "https://schema.org/",
+      "@type": "Organization",
+      "name": "Teq Vault LLC",
+      "url": "https://quetiemals.online",
+      "logo": "https://quetiemals.online/img/featured.jpg",
+      "description": "Indie mobile game studio behind Quetiemals: The Fight For Eyuforyia, Connect 4, and Forge & Ruin.",
+      "sameAs": [
+        "https://discord.gg/4CAYz2ZCqC",
+        "https://www.youtube.com/@teqvault",
+        "https://www.facebook.com/profile.php?id=61577353297986",
+        "https://teqvault.online"
+      ],
+      "contactPoint": { "@type": "ContactPoint", "email": "support@teqvault.online" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "VideoGame",
+      "name": "Quetiemals: The Fight For Eyuforyia",
+      "description": "A boss-focused Match-3 RPG where players command mythic animal guardians to dismantle mechanized Tech-Biomes and push back the Central AI threatening the world of Eyuforyia.",
+      "genre": ["Match-3", "RPG", "Puzzle", "Strategy"],
+      "gamePlatform": "Android",
+      "operatingSystem": "Android",
+      "applicationCategory": "Game",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "url": "https://play.google.com/store/apps/details?id=com.teqvault.quetiemals",
+      "image": "https://quetiemals.online/img/featured.jpg",
+      "author": { "@type": "Organization", "name": "Teq Vault LLC" }
+    },
+    {
+      "@context": "https://schema.org/",
+      "@type": "VideoGame",
+      "name": "Forge & Ruin",
+      "description": "A War Supply RPG where you draw lines across matching material tiles to forge weapons, armor, and supplies for five factions fighting over a crumbling world.",
+      "genre": ["Strategy", "RPG", "Puzzle"],
+      "gamePlatform": "Android",
+      "operatingSystem": "Android",
+      "applicationCategory": "Game",
+      "author": { "@type": "Organization", "name": "Teq Vault LLC" }
+    }
+  ]
   </script>
 
   <style>
@@ -329,40 +381,33 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background: #020c1e;
     }
 
-    /* Quetiemals art */
-    .art-quetiemals {
+    .game-card-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* Fallback gradient shown via onerror when image is missing */
+    .art-placeholder { display: flex; align-items: center; justify-content: center; }
+    .art-placeholder.art-quetiemals {
       background: radial-gradient(ellipse at 30% 40%, rgba(34,211,238,0.18), transparent 60%),
                   radial-gradient(ellipse at 70% 60%, rgba(168,85,247,0.2), transparent 60%),
                   linear-gradient(135deg, #020c1e, #0a1628);
     }
-
-    /* Connect 4 art */
-    .art-connect4 {
+    .art-placeholder.art-connect4 {
       background: radial-gradient(ellipse at 30% 40%, rgba(249,115,22,0.2), transparent 60%),
                   radial-gradient(ellipse at 70% 60%, rgba(168,85,247,0.15), transparent 60%),
                   linear-gradient(135deg, #120a00, #1a0e02);
     }
-
-    /* Forge & Ruins art */
-    .art-forge {
+    .art-placeholder.art-forge {
       background: radial-gradient(ellipse at 50% 30%, rgba(74,222,128,0.15), transparent 60%),
                   radial-gradient(ellipse at 30% 70%, rgba(34,211,238,0.1), transparent 60%),
                   linear-gradient(135deg, #020f08, #041208);
-    }
-
-    .art-icon {
-      font-size: 3.5rem;
-      filter: drop-shadow(0 0 24px currentColor);
-      z-index: 1;
-      line-height: 1;
-    }
-
-    .art-glow {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.04), transparent 70%);
     }
 
     .game-badge {
@@ -822,9 +867,8 @@
 
       <!-- Quetiemals -->
       <div class="game-card">
-        <div class="game-card-art art-quetiemals">
-          <div class="art-glow"></div>
-          <div class="art-icon">🐾</div>
+        <div class="game-card-art">
+          <img src="img/featured.jpg" alt="Quetiemals: The Fight For Eyuforyia" onerror="this.style.display='none';this.parentElement.classList.add('art-placeholder','art-quetiemals')" />
           <div class="game-badge badge-live">● Live</div>
         </div>
         <div class="game-body">
@@ -846,9 +890,8 @@
 
       <!-- Connect 4 -->
       <div class="game-card">
-        <div class="game-card-art art-connect4">
-          <div class="art-glow"></div>
-          <div class="art-icon">🔴</div>
+        <div class="game-card-art">
+          <img src="img/connect4banner.png" alt="Connect 4" onerror="this.style.display='none';this.parentElement.classList.add('art-placeholder','art-connect4')" />
           <div class="game-badge badge-soon">Coming Soon</div>
         </div>
         <div class="game-body">
@@ -867,23 +910,42 @@
       </div>
 
       <!-- Forge & Ruins -->
-      <div class="game-card">
-        <div class="game-card-art art-forge">
-          <div class="art-glow"></div>
-          <div class="art-icon">⚒️</div>
-          <div class="game-badge badge-dev">In Development</div>
+      <div class="game-card" style="
+        background: #0F0E0D;
+        border-color: #2C2C2A;
+      ">
+        <div class="game-card-art" style="border-bottom: 0.5px solid #2C2C2A;">
+          <img src="img/the_SmithBG.png" alt="Forge &amp; Ruins" onerror="this.style.display='none';this.parentElement.classList.add('art-placeholder','art-forge')" />
+          <div class="game-badge" style="
+            background: #2C1A08;
+            border: 0.5px solid #BA7517;
+            color: #EF9F27;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.08em;
+          ">In Development</div>
         </div>
         <div class="game-body">
-          <div class="game-genre">Action RPG · Android</div>
-          <div class="game-title">Forge &amp; Ruins</div>
-          <p class="game-desc">Venture into crumbling ruins, forge powerful gear from what you find, and survive what lurks in the dark. A mobile action RPG built around crafting, exploration, and meaningful combat.</p>
+          <div class="game-genre" style="color: #BA7517; font-family: 'Inter', sans-serif; letter-spacing: 0.08em;">Action RPG · Android</div>
+          <div class="game-title" style="color: #D3D1C7; font-family: 'Inter', sans-serif; font-weight: 500; letter-spacing: -0.01em; text-transform: none;">Forge &amp; Ruins</div>
+          <p class="game-desc" style="color: #888780;">A War Supply RPG set on a battlefield that needs you. Draw lines across matching material tiles — iron, water, fire, gems — to forge weapons, armor, and supplies for five factions fighting over a crumbling world. Every order matters. Every piece you craft tips the war.</p>
           <div class="game-tags">
-            <span class="tag">Crafting</span>
-            <span class="tag">Exploration</span>
-            <span class="tag">Dungeon Combat</span>
+            <span class="tag" style="background: #2C1A08; border-color: #BA7517; color: #EF9F27;">War Supply</span>
+            <span class="tag" style="background: #0D1A08; border-color: #3B6D11; color: #639922;">Tile Drawing</span>
+            <span class="tag" style="background: #2C2C2A; border-color: #444441; color: #888780;">Faction Strategy</span>
           </div>
           <div class="game-cta">
-            <span class="btn-play btn-play-dev">🔨 In Development — Stay Tuned</span>
+            <span class="btn-play" style="
+              background: #2C1A08;
+              border: 0.5px solid #BA7517;
+              color: #EF9F27;
+              font-family: 'Inter', sans-serif;
+              font-weight: 500;
+              letter-spacing: 0.04em;
+              text-transform: none;
+              font-size: 0.8rem;
+              cursor: default;
+              opacity: 0.9;
+            ">⚒️ In Development — Stay Tuned</span>
           </div>
         </div>
       </div>
@@ -1091,13 +1153,14 @@
     <h2 class="section-title">The World of Eyuforyia</h2>
     <p class="section-sub">Every match is a fragment of a dying planet fighting back.</p>
 
-    <div class="lore-strip">
-      <div class="lore-quote">
+    <div class="lore-strip" style="background-image: url('img/WarMapCircular.png'); background-size: cover; background-position: center; position: relative; overflow: hidden;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(10,18,36,0.92),rgba(6,11,24,0.88));z-index:0;"></div>
+      <div class="lore-quote" style="position:relative;z-index:1;">
         "Every tile on the board is a fragment of Eyuforyia's <strong>hum</strong> — Energy, Nature, Night, Tech, Holy, Void. 
         Matches do not just trigger skills. They physically rewrite terrain, status, and even enemy maximum health. 
         The objective is not merely protecting Eyuforyia, but <strong>re-tuning it</strong>."
       </div>
-      <a href="https://eyuforyia.com" target="_blank" rel="noopener" class="btn btn-ghost" style="white-space:nowrap;">
+      <a href="https://eyuforyia.com" target="_blank" rel="noopener" class="btn btn-ghost" style="white-space:nowrap;position:relative;z-index:1;">
         Explore the Lore →
       </a>
     </div>
