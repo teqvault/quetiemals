@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quetiemals.online/sitemap.xml
